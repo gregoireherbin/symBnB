@@ -1,12 +1,81 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
-<body>
-<h1>Bienvenue sur ma page d'accueil !</h1>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container pb-5">
+		<div class="jumbotron mt-3 bg-light p-3">
+			<h1>Bienvenue sur SymBnB !</h1>
+			<p>Nous mettons en relation les voyageurs et les propriétaires souhaitant profiter des opportunités et gagner de l'argent en proposant leur bien à la location.</p>
+			<hr class="my-4">
+			<p>
+				Vous êtes un voyageur ? Et vous voulez voir où vous pourrez vous loger pour votre prochain déplacement ?
+			</p>
+
+			<p class="text-center">
+				<a class="btn btn-primary btn-lg">Voir nos annonces</a>
+			</p>
+		</div>
+
+		<h2 class="mt-5">
+			Nos appartements stars
+		</h2>
+		<div class="row">
+			<div class="col-lg-4 col-sm-12">
+				<div class="card" style="">
+					<img src="http://placehold.it/1000x400" class="card-img-top" style="height:200px; width:100%; display:block;" alt="...">
+					<div class="card-body text-center">
+						<h5 class="card-title">3 chambres - 55 &euro;/nuit</h5>
+						<p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<div class="card" style="">
+					<img src="http://placehold.it/1000x400" class="card-img-top" style="height:200px; width:100%; display:block;" alt="...">
+					<div class="card-body  text-center">
+						<h5 class="card-title">3 chambres - 55 &euro;/nuit</h5>
+						<p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<div class="card" style="">
+					<img src="http://placehold.it/1000x400" class="card-img-top" style="height:200px; width:100%; display:block;" alt="...">
+					<div class="card-body  text-center">
+						<h5 class="card-title">3 chambres - 55 &euro;/nuit</h5>
+						<p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h2>Nos propriétaires stars</h2>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="card border-secondary">
+					<div class="card-body">
+						<h4 class="card-title">Franck Dupond</h4>
+						<hr>
+						<div class="card-text">
+                           Ex duis commodo irure officia ullamco cupidatat laboris sint ut eiusmod sunt esse sunt commodo. 
+                    </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="card border-secondary">
+					<div class="card-body">
+						<h4 class="card-title">Franck Dupond</h4>
+						<hr>
+						<div class="card-text">
+                           Ex duis commodo irure officia ullamco cupidatat laboris sint ut eiusmod sunt esse sunt commodo. 
+                    </div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+{% endblock %}
