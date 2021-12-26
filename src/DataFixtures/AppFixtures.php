@@ -18,10 +18,12 @@ class AppFixtures extends Fixture
                
             $ad = new Ad();
 
+            $faker -> addProvider ( new \ Xvladqt \ Faker \ LoremFlickrProvider ( $faker ));
+
             $title = $faker ->sentence();
             $content = '<p>'.join('<p></p>', $faker -> paragraphs(5)).'</p>';
             $introduction = $faker -> paragraph (2);
-            $coverImage = $faker -> imageUrl($width = 1000, $height = 350);
+            $coverImage = $faker -> imageUrl($width=1000,$height=350,['house']);
                
             $ad->setTitle($title)
                 ->setContent($content)
@@ -36,7 +38,7 @@ class AppFixtures extends Fixture
 
                     $image = new Image();
 
-                    $image->setUrl($faker->imageUrl())
+                    $image->setUrl($faker->imageUrl($width=1000,$height=350,['house']))
                         ->setAd($ad) 
                         ->setCaption($faker->sentence());  
                     
