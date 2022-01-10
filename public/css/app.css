@@ -7,3 +7,8 @@ a, a:hover {
     text-decoration: none;
     color:black;
 }
+
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
