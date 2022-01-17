@@ -42,6 +42,10 @@ class AdController extends AbstractController
         
         
         if($form ->isSubmitted() && $form->isValid()){
+            foreach($ad->getImages() as $image){
+                $image->setAd($ad);
+                $manager->getManager()->persist($image);
+            }
 
             $this->addFlash(
                 'notice',
