@@ -20,13 +20,15 @@ class AdType extends AbstractType
      * Fonction qui permet de configurer les champs du formulaire
      */
 
-    private function getConfiguration($label,$placeholder){
+    private function getConfiguration($label,$placeholder,$options=[]){
         
-        return ['label' => $label,
+        return array_merge (['label' => $label,
                 'attr' => [ 
-                    'placeholder' => $placeholder
+                    'placeholder' => $placeholder,
                 ]
-        ];
+                
+                
+                ],$options);
 
     }
 
@@ -34,7 +36,7 @@ class AdType extends AbstractType
     {
         $builder
             ->add('title',TextType::class,$this->getConfiguration("Titre","Tapez un titre pour votre annonce"))
-            ->add('slug',TextType::class,$this->getConfiguration("Adresse web","Tapez une adresse web (automatique)"))
+            ->add('slug',TextType::class,$this->getConfiguration("Adresse web","Tapez une adresse web (automatique)",['required' => false]))
             ->add('coverImage',UrlType::class,$this->getConfiguration("Url de l'image principale","Donnez l'adresse d'une image"))
             ->add('introduction',TextType::class,$this->getConfiguration("Introduction","Donnez une descripation globale de l'annonce"))
             ->add('content',TextareaType::class,$this->getConfiguration("Description détaillée","Donnez une description détaillée de votre annonce qui donne vraiment envie !"))

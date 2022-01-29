@@ -1,17 +1,18 @@
-{% extends 'base.html.twig'%}
-
+{% extends 'base.html.twig' %}
+{% block title %}
+	Edition d'une annonce
+{% endblock %}
 {% form_theme form _self %}
+
 {% block body %}
 	<div class="container">
-
-
-		<h1>Créer une annonce
-		</h1> {{ form_start(form) }} {{ form_widget(form) }}
-		<button type="submit" class="btn btn-primary">
-			Créer l'annonce</button> {{ form_end(form) }}
+		<h1>Edition d'une annonce</h1> 
+        {{ form_start(form) }} 
+        {{ form_widget(form) }}
+		<button type="submit" class="btn btn-primary">Modifier l'annonce</button> 
+        {{ form_end(form) }}
 	</div>
 {% endblock %}
-
 {% block _ad_images_widget %} {{ form_widget(form)}}
 <input type="hidden" id="widgets-counter" value="0">
 
@@ -66,3 +67,4 @@ $("#"+target).remove();
 handleDeleteButtons();
 		</script>
 	{% endblock %}
+
