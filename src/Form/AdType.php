@@ -42,7 +42,7 @@ class AdType extends AbstractType
             ->add('content',TextareaType::class,$this->getConfiguration("Description détaillée","Donnez une description détaillée de votre annonce qui donne vraiment envie !"))
             ->add('rooms',IntegerType::class,$this->getConfiguration("Nombre de chambres","Indiquez le nombre de chambres disponibles"))
             ->add('price', MoneyType::class,$this->getConfiguration("Prix pour une nuit","Indiquez le prix que vous souhaitez pour une nuit"))
-            ->add('images',CollectionType::class,['entry_type'=>ImageType::class,'allow_add'=>true])
+            ->add('images',CollectionType::class,['entry_type'=>ImageType::class,'allow_add'=>true,'allow_delete'=>true])
             ;
     }
 
